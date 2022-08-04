@@ -12,8 +12,13 @@ public class AdventOfCode2021Processor {
     private static final DayFactory _dayFactory = new DayFactory();
 
     public static void main(final String[] args) {
-        System.out.println("Welcome to Andrew's Advent of Code 2020 Solutions\n");
+        System.out.println("Welcome to Andrew's Advent of Code 2021 Solutions\n");
 
+        executeAdventOfCode();
+
+    }
+
+    private static void executeAdventOfCode() {
         boolean stop = false;
         Day day = null;
         int choice;
@@ -23,8 +28,8 @@ public class AdventOfCode2021Processor {
                 choice = _scanner.nextInt();
                 stop = true;
 
-                if (choice < 0 && choice < 25) {
-                    day = _dayFactory.getDay(choice);
+                if (choice > 0 && choice < 25) {
+                    day = DayFactory.getDay(choice);//_dayFactory.getDay(choice);
                     System.out.printf("%s selected%n", _dayProcessor.getFormattedName(day));
                     _dayProcessor.executeDay(day);
                 } else {
