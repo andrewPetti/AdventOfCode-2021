@@ -1,6 +1,6 @@
 package com.chemies.aoc2021;
 
-import com.chemies.aoc2021.day.AbstractDay;
+import com.chemies.aoc2021.day.Day;
 import com.chemies.aoc2021.day.DayFactory;
 import com.chemies.aoc2021.day.DayProcessor;
 
@@ -15,7 +15,7 @@ public class AdventOfCode2021Processor {
         System.out.println("Welcome to Andrew's Advent of Code 2020 Solutions\n");
 
         boolean stop = false;
-        AbstractDay day = null;
+        Day day = null;
         int choice;
         while (!stop) {
             try {
@@ -25,7 +25,7 @@ public class AdventOfCode2021Processor {
 
                 if (choice < 0 && choice < 25) {
                     day = _dayFactory.getDay(choice);
-                    System.out.printf("%s selected%n", day.getFormattedName());
+                    System.out.printf("%s selected%n", _dayProcessor.getFormattedName(day));
                     _dayProcessor.executeDay(day);
                 } else {
                     System.out.printf("Day %d is currently not implemented. Please choose again.%n", choice);
