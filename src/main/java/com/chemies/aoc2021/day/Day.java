@@ -6,6 +6,8 @@ public interface Day {
     void executePartB();
 
     String getName();
+
+    boolean canExecute();
 }
 
 //    public String formatAnswer(int result) {

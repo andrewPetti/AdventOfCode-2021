@@ -12,9 +12,13 @@ public class DayProcessor {
     private final Scanner _scanner = new Scanner(in);
 
     public void executeDay(final Day day) {
+        if (!day.canExecute()) {
+            out.println(getFormattedName(day));
+            return;
+        }
         boolean stop = false;
         while (!stop) {
-            out.printf("Run %s part a or b? (q to quit)%n", getFormattedName(day));
+            out.printf("%s - run part a or b? (q to quit)%n", getFormattedName(day));
             stop = true;
             final String response = _scanner.next().toLowerCase();
             switch (response) {

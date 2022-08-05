@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class AdventOfCode2021Processor {
     private static final Scanner _scanner = new Scanner(System.in);
     private static final DayProcessor _dayProcessor = new DayProcessor();
-    private static final DayFactory _dayFactory = new DayFactory();
+
 
     public static void main(final String[] args) {
         System.out.println("Welcome to Andrew's Advent of Code 2021 Solutions\n");
@@ -20,7 +20,6 @@ public class AdventOfCode2021Processor {
 
     private static void executeAdventOfCode() {
         boolean stop = false;
-        Day day = null;
         int choice;
         while (!stop) {
             try {
@@ -29,8 +28,7 @@ public class AdventOfCode2021Processor {
                 stop = true;
 
                 if (choice > 0 && choice < 25) {
-                    day = DayFactory.getDay(choice);//_dayFactory.getDay(choice);
-                    System.out.printf("%s selected%n", _dayProcessor.getFormattedName(day));
+                    final Day day = DayFactory.getDay(choice);
                     _dayProcessor.executeDay(day);
                 } else {
                     System.out.printf("Day %d is currently not implemented. Please choose again.%n", choice);
