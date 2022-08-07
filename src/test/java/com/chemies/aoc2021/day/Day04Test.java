@@ -19,9 +19,9 @@ public class Day04Test {
         assertEquals(expected, _subject.partA("day04Sample.txt"));
     }
 
-//    @Test
-//    void partB_expectCorrectResult() {
-//        final Integer expected = 230;
-//        assertEquals(expected, _subject.partB("day03Sample.txt"));
-//    }
+    @Test
+    void partB_expectCorrectResult() {
+        final Integer expected = 1924;
+        assertEquals(expected, _subject.partB("day04Sample.txt"));
+    }
 }
