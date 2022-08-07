@@ -14,6 +14,7 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
     implementation("com.diogonunes:JColor:5.5.1")
     implementation("com.google.guava:guava:31.1-jre")
+    implementation("org.javatuples:javatuples:1.2")
 }
 
 tasks.getByName<Test>("test") {
