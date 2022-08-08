@@ -11,6 +11,8 @@ public class DayFactory {
             return new Day03();
         } else if (day == 4) {
             return new Day04();
+        } else if (day == 5) {
+            return new Day05();
         }
 
         return new UnimplementedDay(day);
